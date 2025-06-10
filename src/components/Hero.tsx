@@ -1,27 +1,25 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail, Code, Zap, Award } from "lucide-react";
-
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
       {/* Modern Background Effects */}
       <div className="absolute inset-0 hero-bg"></div>
       
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+        backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
                            linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+        backgroundSize: '50px 50px'
+      }}></div>
       </div>
 
       {/* Floating Elements */}
@@ -43,7 +41,7 @@ export const Hero = () => {
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                   <span className="text-white">Hello, I'm</span>
                   <br />
-                  <span className="text-gradient">Avi Mohan</span>
+                  <span className="text-gradient text-4xl">Avi Mohan Kumar Shuklaa</span>
                 </h1>
                 
                 <div className="text-2xl md:text-3xl font-medium text-white/80">
@@ -59,20 +57,11 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection("projects")}
-                className="bg-primary hover:bg-primary/90 glow-effect text-white font-semibold px-8 py-3"
-              >
+              <Button size="lg" onClick={() => scrollToSection("projects")} className="bg-primary hover:bg-primary/90 glow-effect text-white font-semibold px-8 py-3">
                 <Code className="mr-2" size={20} />
                 View Projects
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={() => scrollToSection("contact")}
-                className="glass-effect border-white/20 text-white hover:bg-white/10 px-8 py-3"
-              >
+              <Button size="lg" variant="outline" onClick={() => scrollToSection("contact")} className="glass-effect border-white/20 text-white hover:bg-white/10 px-8 py-3">
                 <Mail className="mr-2" size={20} />
                 Let's Talk
               </Button>
@@ -120,12 +109,7 @@ export const Hero = () => {
               </div>
               
               {/* Floating Achievement Cards */}
-              <div className="absolute -top-6 -right-8 glass-effect rounded-xl p-4 shadow-2xl">
-                <div className="flex items-center gap-2">
-                  <Award className="text-primary" size={20} />
-                  <span className="text-xs text-white/80 font-medium">INSPIRE Winner</span>
-                </div>
-              </div>
+              
               
               <div className="absolute -bottom-8 -left-8 glass-effect rounded-xl p-4 shadow-2xl">
                 <div className="flex items-center gap-2">
@@ -134,12 +118,7 @@ export const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -right-12 glass-effect rounded-xl p-4 shadow-2xl transform -translate-y-1/2">
-                <div className="flex items-center gap-2">
-                  <Zap className="text-purple-400" size={20} />
-                  <span className="text-xs text-white/80 font-medium">NASA Scientist</span>
-                </div>
-              </div>
+              
 
               {/* Orbiting Elements */}
               <div className="absolute top-8 left-8 w-4 h-4 bg-primary/60 rounded-full animate-ping"></div>
@@ -152,14 +131,9 @@ export const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="flex flex-col items-center gap-2 animate-bounce">
             <span className="text-xs text-white/60">Scroll to explore</span>
-            <ArrowDown 
-              size={24} 
-              className="text-white/60 cursor-pointer hover:text-primary transition-colors"
-              onClick={() => scrollToSection("about")}
-            />
+            <ArrowDown size={24} className="text-white/60 cursor-pointer hover:text-primary transition-colors" onClick={() => scrollToSection("about")} />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
