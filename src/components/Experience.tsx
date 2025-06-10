@@ -13,10 +13,11 @@ export const Experience = () => {
     },
     {
       year: "2024",
-      title: "Google DevFest Showcase",
-      organization: "Google Developers",
-      description: "Showcased innovative tech projects and participated in developer community events.",
-      type: "Conference",
+      title: "Active Member & Volunteer",
+      organization: "Google Developers Group Ranchi",
+      description: "Actively contributed to GDG Ranchi as a volunteer at DevFest 2024, Jharkhand's largest tech conference. Showcased a humanoid robot to 1000+ attendees and supported event logistics, community engagement, and technical demonstrations throughout the event.",
+      type: "Volunteer",
+      duration: "Jan 2024 – Present"
     },
     {
       year: "2024",
