@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail, Code, Zap, Award } from "lucide-react";
+
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -9,7 +11,9 @@ export const Hero = () => {
       });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
       {/* Modern Background Effects */}
       <div className="absolute inset-0 hero-bg"></div>
       
@@ -41,7 +45,7 @@ export const Hero = () => {
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                   <span className="text-white">Hello, I'm</span>
                   <br />
-                  <span className="text-gradient text-4xl">Avi Mohan Kumar Shuklaa</span>
+                  <span className="text-gradient text-4xl">Avi Mohan Kumar Shuklaa</span>
                 </h1>
                 
                 <div className="text-2xl md:text-3xl font-medium text-white/80">
@@ -98,27 +102,27 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Enhanced Profile */}
+          {/* Right Content - Profile Picture */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Main Profile Circle */}
-              <div className="w-96 h-96 bg-gradient-to-br from-primary via-blue-500 to-cyan-400 rounded-full profile-glow flex items-center justify-center">
-                <div className="w-80 h-80 glass-effect rounded-full flex items-center justify-center">
-                  <div className="text-6xl font-bold text-gradient">AMS</div>
+              {/* Main Profile Circle with Image */}
+              <div className="w-96 h-96 bg-gradient-to-br from-primary via-blue-500 to-cyan-400 rounded-full profile-glow flex items-center justify-center p-2">
+                <div className="w-full h-full glass-effect rounded-full overflow-hidden">
+                  <img 
+                    src="https://i.postimg.cc/xCqbRs45/1000108570.jpg" 
+                    alt="Avi Mohan Kumar Shuklaa"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
               {/* Floating Achievement Cards */}
-              
-              
               <div className="absolute -bottom-8 -left-8 glass-effect rounded-xl p-4 shadow-2xl">
                 <div className="flex items-center gap-2">
                   <Code className="text-cyan-400" size={20} />
                   <span className="text-xs text-white/80 font-medium">AI Enthusiast</span>
                 </div>
               </div>
-              
-              
 
               {/* Orbiting Elements */}
               <div className="absolute top-8 left-8 w-4 h-4 bg-primary/60 rounded-full animate-ping"></div>
@@ -135,5 +139,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
