@@ -60,12 +60,14 @@ export const Hero = () => {
               </div>
             </div>
 <a
-  href="/resume.pdf"
-  download
+  href="https://drive.google.com/file/d/1ZsCmHtjMcPmvIXfaYxiMjR9hcZJyP2qL/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
   className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
 >
-  Download Resume
+  View Resume
 </a>
+
 
             <div className="flex flex-wrap gap-4">
               <Button size="lg" onClick={() => scrollToSection("projects")} className="bg-primary hover:bg-primary/90 glow-effect text-white font-semibold px-8 py-3">
