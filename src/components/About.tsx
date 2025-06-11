@@ -46,9 +46,7 @@ export const About = () => {
               </p>
               
               <p className="text-lg text-white/80 leading-relaxed">
-                As a Class 11 student at LKCRMS, I've had the privilege of participating in prestigious 
-                programs including the Oxford Scholars Programme, Young Changemaker at IIM Ranchi, 
-                and Stanford's CS106A Code in Place.
+                As a Class 12 student at LKCRMS, I've been fortunate to engage in globally recognized academic experiences that have expanded my problem-solving, innovation, and leadership skills—ranging from intensive coding courses to changemaker initiatives and international scholar programmes.
               </p>
               
               <p className="text-lg text-white/80 leading-relaxed">
