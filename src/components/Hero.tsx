@@ -115,7 +115,8 @@ export const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Main Profile Circle with Image */}
-              <div className="w-96 h-96 bg-gradient-to-br from-primary via-blue-500 to-cyan-400 rounded-full profile-glow flex items-center justify-center p-2">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary via-blue-500 to-cyan-400 rounded-full profile-glow flex items-center justify-center p-2">
+
                 <div className="w-full h-full glass-effect rounded-full overflow-hidden">
                   <img 
                     src="https://i.postimg.cc/xCqbRs45/1000108570.jpg" 
