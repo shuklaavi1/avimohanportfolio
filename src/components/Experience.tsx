@@ -136,6 +136,7 @@ export const Experience = () => {
                   </p>
                   <p className="text-foreground/80">
                     Pursuing Science stream with focus on Mathematics, Physics, and Chemistry
+                    Academic House Captain
                   </p>
                 </CardContent>
               </Card>
