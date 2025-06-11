@@ -65,12 +65,12 @@ export const Experience = () => {
     {
       title: "AIR 5 - Cybernation Olympiad",
       organization: "LKCRMS",
-      description: "All India Rank 5 in National Cyber Olympiad",
+      description: "All India Rank 5 in National Cybernation Olympiad",
       year: "2023",
     },
     {
       title: "Oxford Scholars Programme",
-      organization: "OSP",
+      organization: "Oxford Scholars",
       description: "Selected among top 100 global students for AI & Programming",
       year: "2025",
     },
