@@ -132,10 +132,10 @@ export const Experience = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground/80 mb-2">
-                    <strong>Class 11 Student</strong> at LKCRMS
+                    <strong>Class 12 Student</strong> at LKCRMS
                   </p>
                   <p className="text-foreground/80">
-                    Pursuing Science stream with focus on Mathematics, Physics, and Computer Science
+                    Pursuing Science stream with focus on Mathematics, Physics, and Chemistry
                   </p>
                 </CardContent>
               </Card>
