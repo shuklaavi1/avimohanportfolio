@@ -57,7 +57,13 @@ export const Experience = () => {
 
   const awards = [
     {
-      title: "INSPIRE Award Awaedee",
+      title: "Best Budding Entrepreneur of the Year 2025",
+      organization: "Startup Jharkhand",
+      description: "Youngest awardee and only high schooler recognized at Jharkhand's largest startup summit. Founded Innobotix – a robotics platform with its own AI Mentor (www.innobotix.in).",
+      year: "2025",
+    },
+    {
+      title: "INSPIRE Award Awardee",
       organization: "Government of India - Department of Sci & Tech",
       description: "Recognition and Rupees 10 thousand funds for River-Cleaning Robot innovation",
       year: "2023",
