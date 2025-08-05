@@ -14,74 +14,57 @@ export const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden">
-      {/* Subtle Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
+      {/* Subtle Background with Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background"></div>
       
-      {/* Minimal Grid */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
-                             linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}></div>
-      </div>
+      {/* Ambient Glow Effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center text-center space-y-12 max-w-4xl mx-auto">
-          {/* Profile Picture - Centered at Top */}
+        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
+          
+          {/* Profile Picture with Glow */}
           <div className="relative">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary to-primary/80 rounded-full p-1">
-              <div className="w-full h-full bg-card rounded-full overflow-hidden">
-                <img 
-                  src="https://i.postimg.cc/xCqbRs45/1000108570.jpg" 
-                  alt="Avi Mohan Kumar Shuklaa"
-                  className="w-full h-full object-cover"
-                />
+            <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 relative">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/60 rounded-full blur-md opacity-50"></div>
+              {/* Border Ring */}
+              <div className="relative w-full h-full bg-gradient-to-r from-primary to-primary/80 rounded-full p-1">
+                <div className="w-full h-full bg-background rounded-full overflow-hidden">
+                  <img 
+                    src="https://i.postimg.cc/xCqbRs45/1000108570.jpg" 
+                    alt="Avi Mohan Kumar Shuklaa"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-3 bg-card/50 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-muted-foreground">Available for opportunities</span>
-          </div>
-          
           {/* Main Content */}
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-foreground">Hello, I'm</span>
-              <br />
+              <span className="text-foreground">Hello, I'm </span>
               <span className="text-gradient">Avi Mohan Kumar Shuklaa</span>
             </h1>
             
-            <div className="text-xl sm:text-2xl md:text-3xl font-medium text-muted-foreground">
-              AI & Robotics Innovator
+            <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">
+              AI & Robotics Innovator | High School Student | Tech Founder
             </div>
             
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              High School Innovator | INSPIRE Awardee | NASA Citizen Scientist
-              <br />
-              Building the future through innovative technology solutions.
+              A passionate high school innovator exploring AI, robotics, and space technology through 
+              global fellowships and real-world projects. Building the future, one innovation at a time.
             </p>
           </div>
 
-          {/* Resume Link */}
-          <a
-            href="https://drive.google.com/file/d/1ZsCmHtjMcPmvIXfaYxiMjR9hcZJyP2qL/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
-          >
-            View Resume
-          </a>
-
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button 
               size="lg" 
               onClick={() => scrollToSection("projects")} 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300"
             >
               <Code className="mr-2" size={20} />
               View Projects
@@ -90,25 +73,42 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               onClick={() => scrollToSection("contact")} 
-              className="border-border text-foreground hover:bg-accent px-8 py-3"
+              className="border-border text-foreground hover:bg-accent px-8 py-3 hover:shadow-lg transition-all duration-300"
             >
               <Mail className="mr-2" size={20} />
-              Let's Talk
+              Let's Connect
             </Button>
           </div>
 
-          {/* Social Links */}
-          <div className="flex gap-4">
-            <Button size="icon" variant="ghost" className="hover:bg-accent text-foreground" asChild>
-              <a href="mailto:hustlewithavi1@gmail.com" aria-label="Email">
-                <Mail size={20} />
-              </a>
-            </Button>
-            <Button size="icon" variant="ghost" className="hover:bg-accent text-foreground" asChild>
-              <a href="https://www.linkedin.com/in/avi-mohan-kr-shuklaa-235605282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-            </Button>
+          {/* Resume & Social Links */}
+          <div className="flex flex-col sm:flex-row items-center gap-6 pt-6">
+            <a
+              href="https://drive.google.com/file/d/1ZsCmHtjMcPmvIXfaYxiMjR9hcZJyP2qL/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              View Resume →
+            </a>
+
+            <div className="flex gap-4">
+              <Button size="icon" variant="ghost" className="hover:bg-accent text-foreground hover:text-primary transition-colors" asChild>
+                <a href="mailto:hustlewithavi1@gmail.com" aria-label="Email">
+                  <Mail size={20} />
+                </a>
+              </Button>
+              <Button size="icon" variant="ghost" className="hover:bg-accent text-foreground hover:text-primary transition-colors" asChild>
+                <a href="https://www.linkedin.com/in/avi-mohan-kr-shuklaa-235605282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin size={20} />
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-3 bg-card/50 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-sm text-muted-foreground">Available for opportunities</span>
           </div>
 
           {/* Stats */}
