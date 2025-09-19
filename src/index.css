@@ -9,43 +9,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 40% 8%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 40% 8%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 8%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 40% 8%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 40% 40%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 210 40% 8%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 40% 85%;
-    --input: 210 40% 96%;
-    --ring: 217 91% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
-
-    /* Veda AI inspired colors */
-    --navy-dark: 217 50% 12%;
-    --navy-light: 217 50% 20%;
-    --electric-blue: 217 91% 50%;
-    --teal-accent: 180 100% 42%;
-    --gradient-start: 217 50% 12%;
-    --gradient-end: 217 50% 20%;
 
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 95%;
@@ -58,42 +50,41 @@
   }
 
   .dark {
-    --background: 217 50% 12%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 217 50% 15%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 217 50% 12%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217 50% 20%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 50% 20%;
-    --muted-foreground: 210 40% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 217 50% 20%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 50% 25%;
-    --input: 217 50% 20%;
-    --ring: 217 91% 50%;
-    
-    --sidebar-background: 217 50% 10%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 50% 20%;
+    --sidebar-accent: 0 0% 12%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 217 50% 25%;
-    --sidebar-ring: 217 91% 50%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -104,33 +95,14 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-feature-settings: 'cv11', 'ss01';
     font-variation-settings: 'opsz' 32;
-    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-feature-settings: 'cv11', 'ss01';
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-    font-weight: 700;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
   }
 }
 
@@ -142,37 +114,19 @@
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-hover:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  .veda-card {
-    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .veda-hero-bg {
-    background: linear-gradient(135deg, hsl(var(--navy-dark)), hsl(var(--navy-light)));
-  }
-
-  .veda-section-padding {
-    @apply py-20 lg:py-32;
-  }
-
-  .veda-container {
-    @apply max-w-6xl mx-auto px-6 lg:px-8;
+    @apply transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10;
   }
 
   .font-mono {
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
   }
 
+  .hero-glow {
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.15);
+  }
+
   .tech-border {
-    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
     height: 1px;
   }
 
