@@ -23,12 +23,11 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
+      <div className="veda-container">
         <div className="flex items-center justify-between h-16">
           <div className="font-bold text-xl">
-            <span className="text-primary">AMS</span>
-            <span className="text-muted-foreground ml-2 hidden sm:inline">Portfolio</span>
+            <span className="text-primary">Avi Shuklaa</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -37,14 +36,14 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 relative group"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 relative group font-medium"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
               </button>
             ))}
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Let's Talk
+            <Button size="sm" className="bg-primary hover:bg-primary/90 font-semibold px-6">
+              Let's Connect
             </Button>
           </div>
 
@@ -61,18 +60,18 @@ export const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background">
+          <div className="md:hidden py-4 border-t border-border">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 px-2 text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="block w-full text-left py-3 px-2 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
             ))}
-            <Button size="sm" className="mt-4 ml-2 bg-primary hover:bg-primary/90">
-              Let's Talk
+            <Button size="sm" className="mt-4 ml-2 bg-primary hover:bg-primary/90 font-semibold">
+              Let's Connect
             </Button>
           </div>
         )}
